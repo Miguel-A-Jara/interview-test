@@ -16,11 +16,11 @@ const MainNavbar = () => {
 
   return (
     <nav 
-      className='flex gap-10 dark:bg-dark-500/60 bg-light-200/60 p-4 
+      className='flex gap-2 lg:gap-10 dark:bg-dark-500/60 bg-light-200/60 p-2 md:p-4 
       transition-colors duration-300 sticky top-0 z-10 backdrop-blur mb-10'
     >
       <button className='bg-white text-black' onClick={toggleTheme}>Toggle</button>
-      <div className='flex flex-grow justify-between'>
+      <div className='flex flex-grow justify-between gap-2'>
         <PaginationButton
           text='Prev'
           disabled={ appState.pokemonPage === 1 }

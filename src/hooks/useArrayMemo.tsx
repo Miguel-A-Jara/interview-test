@@ -15,9 +15,10 @@ const useArrayMemo = <T, >(array: Array<T>) => {
   useEffect(() => {
 
     if (!isSameArray) {
+      console.log('Array changed')
       storedArray.current = array;
     }
-    
+
   }, [isSameArray, array]);
 
 

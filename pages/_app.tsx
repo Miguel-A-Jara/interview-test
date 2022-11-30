@@ -5,7 +5,7 @@ import '../styles/globals.css'
 
 import ApplicationProvider from '../src/context/ApplicationProvider'
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({ defaultOptions: { queries: { refetchOnWindowFocus: false } } });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
