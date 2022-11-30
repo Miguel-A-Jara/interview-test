@@ -12,6 +12,7 @@ interface Props {
 
 const INIT_STATE: IAppState = {
   isDarkMode: getUserThemePreference() === 'dark' ? true : false,
+  pokemonPage: 1
 };
 
 const ApplicationProvider = ({ children }: Props) => {

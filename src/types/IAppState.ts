@@ -1,5 +1,6 @@
 interface IAppState {
-  isDarkMode: boolean;
+  isDarkMode : boolean;
+  pokemonPage: number;
 };
 
 export default IAppState;
