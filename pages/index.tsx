@@ -23,7 +23,7 @@ const Home = () =>  {
         }
         {
           appState.filteredPokemons.length < 1
-            ? <h1 className='dark:text-dark-400 text-light-900 text-5xl font-bold transition-colors duration-300'>
+            ? <h1 className='dark:text-dark-400 text-light-900 text-5xl font-bold transition-colors duration-300 text-center'>
               Sorry! No pokemons to show!
             </h1>
             : null

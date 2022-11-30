@@ -9,8 +9,8 @@ const PaginationButton = ({ text, icon, onClick, disabled }: Props) => {
 
   return (
     <button 
-      className='dark:bg-dark-300 bg-light-300 dark:text-dark-700 text-light-600 p-2 rounded-md 
-      transition-colors duration-300' 
+      className='dark:bg-dark-300 bg-light-200 dark:text-dark-700 text-light-600 p-2 rounded-md 
+      transition-colors duration-300 disabled:opacity-60' 
       onClick={onClick}
       disabled={ disabled }
     >
