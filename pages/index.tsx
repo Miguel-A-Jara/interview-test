@@ -15,8 +15,8 @@ const Home = () =>  {
     <>
       <button className='bg-white text-black' onClick={toggleTheme}>Toggle</button>
       
-      <button className='bg-white text-black' onClick={() => setPokemonPage(prev => prev + 1)}>change Page +</button>
-      <button className='bg-white text-black' onClick={() => setPokemonPage(prev => prev - 1)}>change Page -</button>
+      <button className='mx-2 bg-white text-black' onClick={() => setPokemonPage(prev => prev + 1)}>change Page +</button>
+      <button className='mx-2 bg-white text-black' onClick={() => setPokemonPage(prev => prev - 1)}>change Page -</button>
 
       <div className='flex justify-around items-center flex-wrap gap-2'>
         {

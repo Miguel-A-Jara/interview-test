@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import IPokemon from '../../types/IPokemon';
 import SkeletonWrapper from '../loading/SkeletonWrapper';
+import PokemonInformation from './PokemonInformation';
 
 interface Props {
   pokemon: IPokemon | undefined;
@@ -27,8 +28,12 @@ const PokemonCard = ({ pokemon }: Props) => {
           { pokemon?.name || <SkeletonWrapper /> }
         </h2>
 
-        <div className='bg-'>
-
+        <div className='dark:bg-dark-800/70 bg-light-600/70 dark:text-dark-400 text-light-800 p-2 rounded-lg transition-colors duration-300'>
+          {
+            pokemon 
+              ? <PokemonInformation pokemon={pokemon} />
+              : <SkeletonWrapper count={4} />
+          }
         </div>
 
     </div>
