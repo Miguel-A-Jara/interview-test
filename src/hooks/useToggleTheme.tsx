@@ -26,6 +26,10 @@ const useToggleTheme = () => {
         ? 'SET_LIGHT_MODE' 
         : 'SET_DARK_MODE' 
     })
+
+    localStorage.setItem('themeMode', 
+      appState.isDarkMode ? 'ligth' : 'dark'
+    );
   };
   
   return { toggleTheme };
