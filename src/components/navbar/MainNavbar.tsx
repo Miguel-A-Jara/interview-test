@@ -1,40 +1,42 @@
 import { useContext } from 'react';
-import useToggleTheme from '../../../src/hooks/useToggleTheme';
+
+import Searchbar from '../input/Searchbar';
+import PaginationButton from '../button/PaginationButton';
+import useToggleTheme   from '../../../src/hooks/useToggleTheme';
 import { ApplicationContext } from '../../context/ApplicationContext';
 
 const MainNavbar = () => {
 
   const { toggleTheme } = useToggleTheme();
   const { appState, dispatch } = useContext(ApplicationContext);
-  
+
   const pokemonPagination = (type: 'INC' | 'DEC') => {
     dispatch({ type: type === 'INC' ? 'INCREMENT_PAGE' : 'DECREMENT_PAGE' });
   }
 
   return (
     <nav 
-      className='flex dark:bg-dark-500/60 bg-light-200 p-4 
+      className='flex gap-10 dark:bg-dark-500/60 bg-light-200/60 p-4 
       transition-colors duration-300 sticky top-0 z-10 backdrop-blur mb-10'
     >
       <button className='bg-white text-black' onClick={toggleTheme}>Toggle</button>
-      
-      <button className='mx-2 bg-white text-black' 
-        onClick={() => pokemonPagination('INC')}
-        disabled={ appState.pokemonPage === 10 }
-        >
-          change Page +
-      </button>
-      <button className='mx-2 bg-white text-black' 
-        onClick={() => pokemonPagination('DEC')}
-        disabled={ appState.pokemonPage === 1 }
-      >
-          change Page -
-      </button>
-      <nav>MainNavbar</nav>
+      <div className='flex flex-grow justify-between'>
+        <PaginationButton
+          text='Prev'
+          disabled={ appState.pokemonPage === 1 }
+          onClick={() => pokemonPagination('DEC')}
+          icon='bi bi-caret-left-fill'
+        />
+        <Searchbar />
+        <PaginationButton
+          text='Next'
+          disabled={ appState.pokemonPage === 10 }
+          onClick={() => pokemonPagination('INC')}
+          icon='bi bi-caret-right-fill'
+        />
+      </div>
     </nav>
-
-
-  )
-}
+  );
+};
 
 export default MainNavbar

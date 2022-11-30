@@ -18,7 +18,7 @@ const Home = () =>  {
       <div className='flex justify-around items-center flex-wrap gap-2'>
         {
           pokemons.map(p => (
-            <PokemonCard key={p.data?.id} pokemon={p.data}/>
+            <PokemonCard key={p.id} pokemon={p}/>
           ))
         }
       </div>
