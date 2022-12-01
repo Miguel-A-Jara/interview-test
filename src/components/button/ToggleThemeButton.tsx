@@ -1,10 +1,10 @@
 import { useContext } from 'react';
-import useToggleTheme   from '../../../src/hooks/useToggleTheme';
+import useToggleTheme from '../../../src/hooks/useToggleTheme';
 import { ApplicationContext } from '../../context/ApplicationContext';
 
 const ToggleThemeButton = () => {
 
-  const { appState, dispatch } = useContext(ApplicationContext);
+  const { appState } = useContext(ApplicationContext);
   const { toggleTheme } = useToggleTheme();
 
   return (
@@ -35,9 +35,8 @@ const ToggleThemeButton = () => {
           : <i className='w-6 h-6 flex items-center justify-center bi bi-brightness-high' />
         }
       </div>
-
     </label>
-  )
-}
+  );
+};
 
 export default ToggleThemeButton;

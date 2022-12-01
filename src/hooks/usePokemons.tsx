@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from 'react';
 import useDeepCompareEffect from 'use-deep-compare-effect';
 
-import { ApplicationContext } from '../context/ApplicationContext';
-import IPokemon from '../types/IPokemon';
+import IPokemon         from '../types/IPokemon';
 import useFetchPokemons from './get/useFetchPokemons';
+import { ApplicationContext } from '../context/ApplicationContext';
 
 const usePokemons = (pages: number) => {
 

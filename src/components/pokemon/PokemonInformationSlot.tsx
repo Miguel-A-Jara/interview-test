@@ -12,4 +12,4 @@ const PokemonInformationSlot = ({ title, value }: Props) => {
   )
 }
 
-export default PokemonInformationSlot
+export default PokemonInformationSlot;

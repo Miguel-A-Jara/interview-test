@@ -16,4 +16,4 @@ const PokemonInformation = ({ pokemon }: Props) => {
   )
 }
 
-export default PokemonInformation
+export default PokemonInformation;

@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import Head from 'next/head';
 import { ApplicationContext } from '../src/context/ApplicationContext';
 
 import usePokemons from '../src/hooks/usePokemons';
@@ -13,6 +14,9 @@ const Home = () =>  {
 
   return (
     <>
+      <Head>
+        <title>Miguel Jara - Frontend Challenge</title>
+      </Head>
       <MainNavbar />
 
       <div className='flex justify-around items-center flex-wrap gap-y-10 py-4'>
